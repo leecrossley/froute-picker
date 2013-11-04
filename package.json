@@ -1,0 +1,39 @@
+{
+  "name": "froute-picker",
+  "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
+  "description": "Picking and matching module used by froute.",
+  "homepage": "http://ilee.co.uk",
+  "version": "0.0.1",
+  "main": "froute-picker.js",
+  "keywords": [
+    "froute",
+    "route",
+    "routing",
+    "url",
+    "rest",
+    "restful",
+    "api",
+    "web service"
+  ],
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leecrossley/froute-picker.git"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.x",
+    "grunt-cli": "~0.1.x",
+    "grunt-shell": "~0.5.x",
+    "grunt-contrib-watch": "~0.5.x",
+    "grunt-contrib-jshint": "~0.7.x",
+    "grunt-contrib-jasmine": "~0.5.x"
+  },
+  "dependencies": {
+    "functional.js": "~0.2.x"
+  }
+}
