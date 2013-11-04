@@ -16,7 +16,7 @@ var picker = require("froute-picker");
 
 ## Example
 
-### Picking parameters off a url template and matching a url to the template
+#### Picking parameters from a url template and matching a url to the template
 
 ```javascript
 var template = "/apple/{type}/size/{size}",
