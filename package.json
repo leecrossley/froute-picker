@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "Picking and matching module used by froute.",
   "homepage": "http://ilee.co.uk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "froute-picker.js",
   "keywords": [
     "froute",
@@ -34,6 +34,6 @@
     "grunt-contrib-jasmine": "~0.6.x"
   },
   "dependencies": {
-    "functional.js": "~0.3.x"
+    "functional.js": "~0.4.x"
   }
 }
