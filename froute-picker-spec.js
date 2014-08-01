@@ -24,7 +24,7 @@ describe("froute-picker", function() {
 
         expect(picked).not.toBeNull();
         expect(picked.froute).toEqual(froute);
-        expect(picked.regex).toEqual(new RegExp("^/item/([\\w\\d]+)$"));
+        expect(picked.regex).toEqual(new RegExp("^/item/([\\w\\d.]+)$"));
         expect(picked.parameters.length).toEqual(1);
         expect(picked.parameters).toEqual(["id"]);
     });
@@ -35,7 +35,7 @@ describe("froute-picker", function() {
 
         expect(picked).not.toBeNull();
         expect(picked.froute).toEqual(froute);
-        expect(picked.regex).toEqual(new RegExp("^/item/([\\w\\d]+)/option/([\\w\\d]+)$"));
+        expect(picked.regex).toEqual(new RegExp("^/item/([\\w\\d.]+)/option/([\\w\\d.]+)$"));
         expect(picked.parameters.length).toEqual(2);
         expect(picked.parameters).toEqual(["id", "optionId"]);
     });

@@ -1,6 +1,4 @@
-if (typeof (λ) === "undefined") { 
-    var λ = require("functional.js");
-}
+var λ = λ || require("functional.js");
 
 var picker = (function () {
     "use strict";
@@ -13,7 +11,7 @@ var picker = (function () {
 
         if (placeholders) {
             λ.each(function (item) {
-                regex = regex.replace(item, "([\\w\\d]+)");
+                regex = regex.replace(item, "([\\w\\d.]+)");
                 parameters.push(item.replace(/\{/, "").replace(/\}$/, ""));
             }, placeholders);
         }
