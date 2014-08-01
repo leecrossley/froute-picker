@@ -1,3 +1,5 @@
+/* global picker */
+
 describe("froute-picker", function() {
 
     it("should not be null", function() {
@@ -49,7 +51,7 @@ describe("froute-picker", function() {
     it("should match apples and apples", function() {
         var froute = "/apples",
             picked = picker.pick(froute),
-            matchApples = picker.match("/apples");
+            matchApples = picker.match("/apples"),
             result = matchApples(picked);
 
         expect(result).not.toBeNull();
@@ -59,17 +61,27 @@ describe("froute-picker", function() {
     it("should match apple and type", function() {
         var froute = "/apple/{type}",
             picked = picker.pick(froute),
-            matchApple = picker.match("/apple/gala");
+            matchApple = picker.match("/apple/gala"),
             result = matchApple(picked);
 
         expect(result).not.toBeNull();
         expect(result.type).toEqual("gala");
     });
 
+    it("should match apple and type with dot", function() {
+        var froute = "/apple/{type}",
+            picked = picker.pick(froute),
+            matchApple = picker.match("/apple/apple.com"),
+            result = matchApple(picked);
+
+        expect(result).not.toBeNull();
+        expect(result.type).toEqual("apple.com");
+    });
+
     it("should match apple, type and size", function() {
         var froute = "/apple/{type}/size/{size}",
             picked = picker.pick(froute),
-            matchApple = picker.match("/apple/gala/size/large");
+            matchApple = picker.match("/apple/gala/size/large"),
             result = matchApple(picked);
 
         expect(result).not.toBeNull();
