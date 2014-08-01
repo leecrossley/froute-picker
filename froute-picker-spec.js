@@ -78,6 +78,16 @@ describe("froute-picker", function() {
         expect(result.type).toEqual("apple.com");
     });
 
+    it("should match apple and type with a hyphen", function() {
+        var froute = "/apple/{type}",
+            picked = picker.pick(froute),
+            matchApple = picker.match("/apple/allington-pippin"),
+            result = matchApple(picked);
+
+        expect(result).not.toBeNull();
+        expect(result.type).toEqual("allington-pippin");
+    });
+
     it("should match apple, type and size", function() {
         var froute = "/apple/{type}/size/{size}",
             picked = picker.pick(froute),
