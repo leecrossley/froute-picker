@@ -1,4 +1,4 @@
-var λ = λ || require("functional.js");
+var fjs = fjs || require("functional.js");
 
 var picker = (function () {
     "use strict";
@@ -10,7 +10,7 @@ var picker = (function () {
             parameters = [];
 
         if (placeholders) {
-            λ.each(function (item) {
+            fjs.each(function (item) {
                 regex = regex.replace(item, "([\\w\\d.-]+)");
                 parameters.push(item.replace(/\{/, "").replace(/\}$/, ""));
             }, placeholders);
@@ -23,11 +23,11 @@ var picker = (function () {
         };
     };
 
-    picker.match = λ.curry(function (test, picked) {
+    picker.match = fjs.curry(function (test, picked) {
         var match = test.match(picked.regex),
             result = {};
         if (match) {
-            λ.each(function (item, i) {
+            fjs.each(function (item, i) {
                 result[item] = match[i + 1];
             }, picked.parameters);
             return result;

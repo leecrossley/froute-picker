@@ -32,6 +32,6 @@
     "grunt-contrib-watch": "~0.6.x"
   },
   "dependencies": {
-    "functional.js": "~0.4.x"
+    "functional.js": "~0.5.x"
   }
 }
